@@ -8,7 +8,7 @@ You can also clone this repo and edit locally to get a sense of how it works
 
 ## Deployment
 
-[![Deploy to Heroku](heroku-button.svg)](https://heroku.com/deploy?template=https://gitlab.com/amgando/save-your-fave)
+[![Deploy to Heroku](heroku-button.svg)](https://heroku.com/deploy?template=https://github.com/amgando/save-your-fave)
 
 You will need to create a Heroku account to deploy this application.
 
