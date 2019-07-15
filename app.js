@@ -21,14 +21,13 @@ app.get("/", function(req, res) {
 app.post("/name", function(req, res, next) {
   db.username = req.body.username;
 
-  console.log(db, JSON.stringify(db));
-
   saveDB(db, err => {
     if (err) next(err);
     res.redirect("/");
   });
 });
 
+// save a new link
 app.post("/link", function(req, res, next) {
   let { link, label } = req.body;
 
@@ -45,6 +44,8 @@ app.post("/link", function(req, res, next) {
 app.listen(process.env.PORT || 3000);
 
 function saveDB(db, cb) {
+  console.log("database is currently ... ", db);
+
   fs.writeFile("db.json", JSON.stringify(db), err => {
     cb(err);
   });
